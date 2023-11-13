@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-
+    
     fetchURL()
     
     })
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       function createNav(book, authors){
           const bookNav = document.querySelector("#books");
           const bookNavImg = document.createElement("img");
-          const bookNavTitle = document.createElement("h6");
+         const bookNavTitle = document.createElement("h6");
           const bookNavAuthor = document.createElement("p");
       
           bookNav.append(bookNavImg);
@@ -36,14 +36,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
           bookNavImg.id ='ImageID';
           
+          
 
-          bookNav.addEventListener(('mouseover'), ()=>{
-            popOnHover(ImageData)
+          bookNavImg.addEventListener(('mouseover'), ()=>{
+            popOnHover(bookNavImg)
       })}
 
-      function popOnHover(img){
+      function popOnHover(image){
+        image.style.height = "230px";
         
-        console.log("hovered");
+        
     
         
         }
