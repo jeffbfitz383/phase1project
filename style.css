@@ -40,20 +40,13 @@ p{
    padding:20px;
  }
 
- #bottom-section
- {
-    background-color: Rgba(191,255,191,1);
-    height: 750px;
-    padding-left: 45px;
-
- }
 
  img {
-   max-height: 200px;
+   height: 200px;
  }
 
  #main-book-image{
-   max-height:500px;
+   height:400px;
  }
 
 #books {
@@ -62,3 +55,23 @@ p{
    justify-content: center;
    align-content: space-between
  }
+
+ #bottom-section {
+    background-color: Rgba(191,255,191,1);
+    display: grid;
+    height: 750px;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 45px;
+    border: 4px solid red;
+
+ }
+
+ #main-book-area{
+   border: 1px dashed orange;
+ }
+
+.comments-area {
+   border: 1px dashed blue;
+   padding-top: 45px;
+   padding-left: 20px;
+}
