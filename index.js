@@ -19,15 +19,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
       
       function createNav(book, authors){
           const bookNav = document.querySelector("#books");
+
+        const bookNavCard = document.createElement("div")
+        bookNavCard.classList.add("book-nav-card");
+
           const bookNavImg = document.createElement("img");
           const bookNavTitle = document.createElement("h6");
           const bookNavAuthor = document.createElement("p");
       
 
           //IMPORTANT - We need to store all of these inside a div card 
-          bookNav.append(bookNavImg);
-          bookNav.append(bookNavTitle);
-          bookNav.append(bookNavAuthor);
+          bookNav.appendChild(bookNavCard);
+          bookNavCard.append(bookNavImg);
+          bookNavCard.append(bookNavTitle);
+          bookNavCard.append(bookNavAuthor);
       
           let coverSlug = book.covers; 
       
