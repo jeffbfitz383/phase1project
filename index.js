@@ -1,3 +1,5 @@
+//NOTE - None of the below will work with the current HTML file but can be restuctured once html skeleton is complete
+
 fetch("https://openlibrary.org/books/OL26832992M.json")
   .then((r)=>r.json())
   .then((book)=> {
