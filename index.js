@@ -23,6 +23,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
           const bookNavTitle = document.createElement("h6");
           const bookNavAuthor = document.createElement("p");
       
+
+          //IMPORTANT - We need to store all of these inside a div card 
           bookNav.append(bookNavImg);
           bookNav.append(bookNavTitle);
           bookNav.append(bookNavAuthor);
