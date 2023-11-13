@@ -19,12 +19,25 @@ h3{
    font-family: Inter, sans-serif;
 }
 
+h6{
+   font-size:1em;
+   font-family: Inter, sans-serif;
+}
+
+p{
+   font-size: 0.8em;
+   font-family: Inter, sans-serif;
+}
+
 #top-section
  {
     background-color:rgba(191,191,255,1);
     height: 500px;
     border: 1px solid yellow;
+ }
 
+ .book-nav-card{
+   padding:20px;
  }
 
  #bottom-section
@@ -47,4 +60,5 @@ h3{
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   align-content: space-between
  }
