@@ -1,17 +1,17 @@
-Monday To Do 
+HELLO IM TESTING TO SEE IF THIS PUSH WILL WORK
+
+Monday To Do
 Barrett: -
 Research APIs - Google vs Open Library -
 Research connecting -
-Start some initial JS functions - 
+Start some initial JS functions -
 
 Jeff:
-HTML Skeleton  -
-Github Setup  -
+HTML Skeleton -
+Github Setup -
 
+Development Notes -
 
-
-Development Notes - 
-
-Challenges:  -
+Challenges: -
 Google Books API / OAuth – Open Library -
-Connecting Book from API to Comments in db.json - 
+Connecting Book from API to Comments in db.json -
