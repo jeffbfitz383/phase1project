@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         .then((r)=>r.json())
         .then((authors)=> {
           createNav(book, authors)
+          popOnHover()
         })
         }
-        )
+        )}
       
       function createNav(book, authors){
           const bookNav = document.querySelector("#books");
@@ -32,8 +33,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
           bookNavImg.src = (`https://covers.openlibrary.org/b/id/${coverSlug}.jpg`);
           bookNavTitle.textContent = book.title;
           bookNavAuthor.textContent = authors.name;
-      }}
 
+          bookNavImg.id ='ImageID';
+          
+
+          bookNav.addEventListener(('mouseover'), ()=>{
+            popOnHover(ImageData)
+      })}
+
+      function popOnHover(img){
+        
+        console.log("hovered");
+    
+        
+        }
 
 //NOTE - None of the below will work with the current HTML file but can be restuctured once html skeleton is complete
 
