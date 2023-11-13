@@ -10,3 +10,7 @@
     background-color: Rgba(191,255,191,1);
     height: 150 pxl:
  }
+
+ img {
+   max-height: 200px;
+ }
