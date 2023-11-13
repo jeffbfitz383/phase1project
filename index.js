@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         fetch("https://openlibrary.org/authors/OL6839743A.json")
         .then((r)=>r.json())
         .then((authors)=> {
-          createNav(book, authors)
+          createNav(book, authors), createNav(book, authors), createNav(book, authors)
         })
         }
         )

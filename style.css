@@ -1,16 +1,22 @@
-#top
+#top-section
  {
     background-color:rgba(191,191,255,1);
-    height: 150 pxl;
+    height: 500px;
 
  }
 
- #bottum
+ #bottom-section
  {
     background-color: Rgba(191,255,191,1);
-    height: 150 pxl:
+    height: 150px:
  }
 
  img {
    max-height: 200px;
+ }
+
+#books {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
  }
