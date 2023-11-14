@@ -1,7 +1,7 @@
 bookArray = ["OL26832992M", "OL25536640M", "OL1736028M", "OL7408140M", "OL34017486M", "OL34878707M"];
 authorArray = ["OL6839743A", "OL7031499A", "OL398460A", "OL2670651A", "OL1396390A", "OL318513A"];
 
-let currentBook;
+// let currentBook;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -22,8 +22,6 @@ function fetchBooks(book, author) {
                 .then((r) => r.json())
                 .then((authors) => {
                     createNav(book, authors);
-                   // popOnHover(),
-                    // attachForm()
                 })
         }
         )
@@ -40,8 +38,6 @@ function createNav(book, authors) {
     const bookNavTitle = document.createElement("h6");
     const bookNavAuthor = document.createElement("p");
 
-
-    //IMPORTANT - We need to store all of these inside a div card 
     bookNav.appendChild(bookNavCard);
     bookNavCard.append(bookNavImg);
     bookNavCard.append(bookNavTitle);
@@ -55,31 +51,23 @@ function createNav(book, authors) {
 
     bookNavImg.id = 'ImageID';
 
-
-
     bookNavImg.addEventListener(('mouseover'), () => {
         popOnHover(bookNavImg)
-
-
 
     })
     bookNavImg.addEventListener(('mouseout'), () => {
         popBackIn(bookNavImg)
-
 
     })
 
     bookNavImg.addEventListener(('click'), () => {
         clickOnBook(book, authors, bookNavImg.src)
 
-
     })
 }
 
 function popOnHover(image) {
     image.style.height = "230px";
-
-
 }
 
 function popBackIn(image) {
@@ -88,13 +76,6 @@ function popBackIn(image) {
 
 function clickOnBook(book, authors, bookNavImg) {
 
-    currentBook = book;
-
-    console.log(currentBook);
-
-
-
-    console.log("clicked");
     let bookName = document.querySelector("#book-name");
     let bookAuthor = document.querySelector("#book-author")
     let bookImage = document.querySelector("#main-book-image")
