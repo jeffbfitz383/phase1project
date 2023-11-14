@@ -78,8 +78,9 @@ function popBackIn(image) {
 function clickOnBook(book, authors, bookNavImg) {
 
     let bookName = document.querySelector("#book-name");
-    let bookAuthor = document.querySelector("#book-author")
-    let bookImage = document.querySelector("#main-book-image")
+    let bookAuthor = document.querySelector("#book-author");
+    let bookImage = document.querySelector("#main-book-image");
+    let bookDesc = document.querySelector("#main-book-description")
 
     bookName.textContent = book.title;
     bookAuthor.textContent = authors.name;
