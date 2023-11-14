@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
           bookNavTitle.textContent = book.title;
           bookNavAuthor.textContent = authors.name;
 
-          bookNavImg.id ='ImageID';
+          
           
           
 
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       })
 
       bookNavImg.addEventListener(('click'), ()=>{
-        clickOnBook(bookNavImg)
+        clickOnBook(book, authors)
 
 
    })
@@ -75,9 +75,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
             image.style.height = "200px";
       }
 
-      function clickOnBook(image){
+      function clickOnBook(book, authors){
         console.log("clicked");
-        let  bookName = document.querySelector("#book name");
+        let  bookName = document.querySelector("#book-name");
+        bookName.textContent = book.title;
+
+
       }
 
 //NOTE - None of the below will work with the current HTML file but can be restuctured once html skeleton is complete
