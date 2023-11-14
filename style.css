@@ -10,7 +10,14 @@ h1{
    padding-top: 50px;
 }
 
-h2{
+#top-section h2{
+   font-family: Inter, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#main-book-area h2{
    font-family: Inter, sans-serif;
    padding-top: 45px;
 }
@@ -22,6 +29,12 @@ h3{
 h6{
    font-size:1em;
    font-family: Inter, sans-serif;
+   width: 170px;
+   height: 50px;
+   padding-top: 5px;
+   /* border: 1px solid red; */
+   margin-block-start: 10px;
+   margin-block-end: 10px;
 }
 
 p{
@@ -29,15 +42,25 @@ p{
    font-family: Inter, sans-serif;
 }
 
+.book-nav-card p{
+   font-size: 0.8em;
+   font-family: Inter, sans-serif;
+   /* border: 1px solid blue; */
+}
+
 #top-section
  {
     background-color:rgba(191,191,255,1);
-    height: 500px;
+    height: 600px;
     border: 1px solid yellow;
  }
 
  .book-nav-card{
    padding:20px;
+ }
+
+ .book-nav-card img{
+   /* padding: 10px; */
  }
 
 
@@ -52,7 +75,8 @@ p{
 #books {
    display: flex;
    justify-content: center;
-   align-content: space-between
+   align-content: space-between;
+   padding-top: 20px;
  }
 
  #bottom-section {
@@ -66,14 +90,16 @@ p{
  }
 
  #main-book-area{
-   border: 1px dashed orange;
+   /* border: 1px dashed orange; */
  }
 
 .comments-area {
-   border: 1px dashed blue;
+   /* border: 1px dashed blue; */
    padding-top: 45px;
    padding-left: 20px;
 }
- img {
-   height: 200px;
- }
+
+input {
+   width: 200px;
+   padding: 10px;
+}
