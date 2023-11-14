@@ -98,3 +98,8 @@ p{
    padding-top: 45px;
    padding-left: 20px;
 }
+
+input {
+   width: 200px;
+   padding: 10px;
+}
