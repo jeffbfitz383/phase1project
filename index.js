@@ -102,3 +102,31 @@ newComment.textContent = comment;
 board.append(newComment);   
 })
 
+
+//OPTIONAL FUN ANIMATION - TURN OFF BY DEFAULT
+
+// window.addEventListener('mousemove', createBook);
+
+
+// function createBook(e) {
+//     let book = document.createElement('div');
+//     book.textContent = '📖';
+//     book.style["font-size"] = `100px`;
+//     document.body.appendChild(book);
+
+//     book.style.position = 'absolute';
+//     book.style.left = e.pageX + 'px';
+//     book.style.top = e.pageY + 'px';
+
+//     let animation = book.animate([
+//         { transform: 'scale(1)', opacity: 1, offset: 0 },
+//         { transform: 'scale(2)', opacity: 0, offset: 1 },
+//     ], {
+//         duration: 500,
+//         iterations: 1
+//     });
+
+//     animation.onfinish = () => {
+//         document.body.removeChild(book);
+//     };
+// }
