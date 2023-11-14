@@ -10,7 +10,14 @@ h1{
    padding-top: 50px;
 }
 
-h2{
+#top-section h2{
+   font-family: Inter, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+#main-book-area h2{
    font-family: Inter, sans-serif;
    padding-top: 45px;
 }
@@ -30,6 +37,11 @@ h6{
    margin-block-end: 10px;
 }
 
+p{
+   font-size: 0.8em;
+   font-family: Inter, sans-serif;
+}
+
 .book-nav-card p{
    font-size: 0.8em;
    font-family: Inter, sans-serif;
@@ -39,7 +51,7 @@ h6{
 #top-section
  {
     background-color:rgba(191,191,255,1);
-    height: 500px;
+    height: 600px;
     border: 1px solid yellow;
  }
 
@@ -64,6 +76,7 @@ h6{
    display: flex;
    justify-content: center;
    align-content: space-between;
+   padding-top: 20px;
  }
 
  #bottom-section {
@@ -77,11 +90,11 @@ h6{
  }
 
  #main-book-area{
-   border: 1px dashed orange;
+   /* border: 1px dashed orange; */
  }
 
 .comments-area {
-   border: 1px dashed blue;
+   /* border: 1px dashed blue; */
    padding-top: 45px;
    padding-left: 20px;
 }
