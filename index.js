@@ -75,10 +75,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
           image.style.height = "200px";
     }
 
-    function clickOnBook(image){
-      console.log("clicked");
-      let  bookName = document.querySelector("#book name");
-    }
+      function clickOnBook(book, authors){
+        console.log("clicked");
+        let  bookName = document.querySelector("#book-name");
+        bookName.textContent = book.title;
+
+
+      }
 
 //NOTE - None of the below will work with the current HTML file but can be restuctured once html skeleton is complete
 
