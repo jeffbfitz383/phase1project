@@ -74,6 +74,7 @@ function popBackIn(image) {
     image.style.height = "200px";
 }
 
+//Click Event Listener - Clicked Book From Nav --> Shows up in main
 function clickOnBook(book, authors, bookNavImg) {
 
     let bookName = document.querySelector("#book-name");
@@ -86,15 +87,15 @@ function clickOnBook(book, authors, bookNavImg) {
 
 }
 
-    //Ability to add comments anywhere
-    const commentForm = document.querySelector("#comment-form")
-    commentForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const comment = event.target["comment-input"].value;
-        console.log(comment);
-    const board = document.querySelector("#comment-board") 
-    const newComment = document.createElement("p");
-    newComment.textContent = comment;
-    board.append(newComment);   
-    })
+//Comment Functionality - Ability to Leave A Comment on The Page
+const commentForm = document.querySelector("#comment-form")
+commentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const comment = event.target["comment-input"].value;
+    console.log(comment);
+const board = document.querySelector("#comment-board") 
+const newComment = document.createElement("p");
+newComment.textContent = comment;
+board.append(newComment);   
+})
 
