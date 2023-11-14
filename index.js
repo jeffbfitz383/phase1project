@@ -48,15 +48,37 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
           bookNavImg.addEventListener(('mouseover'), ()=>{
             popOnHover(bookNavImg)
-      })}
+            
+
+
+      })
+           bookNavImg.addEventListener(('mouseout'), ()=>{
+           popBackIn(bookNavImg)
+
+
+      })
+
+      bookNavImg.addEventListener(('click'), ()=>{
+        clickOnBook(bookNavImg)
+
+
+   })
+    }
 
       function popOnHover(image){
         image.style.height = "230px";
         
         
-    
-        
-        }
+      }
+
+      function popBackIn(image){
+            image.style.height = "200px";
+      }
+
+      function clickOnBook(image){
+        console.log("clicked");
+        let  bookName = document.querySelector("#book name");
+      }
 
 //NOTE - None of the below will work with the current HTML file but can be restuctured once html skeleton is complete
 
