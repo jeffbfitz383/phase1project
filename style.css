@@ -51,7 +51,6 @@ p{
 
 #books {
    display: flex;
-   flex-wrap: wrap;
    justify-content: center;
    align-content: space-between
  }
