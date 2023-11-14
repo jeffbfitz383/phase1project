@@ -117,38 +117,3 @@ function clickOnBook(book, authors, bookNavImg) {
     board.append(newComment);   
     })
 
-
-console.log("hello");
-
-//NOTE - None of the below will work with the current HTML file but can be restuctured once html skeleton is complete
-
-
-
-//Hover mouseover event - expand size of book on hover 
-
-// const bookNavImg = bookNavImg;
-
-// bookNavImg.addEventListener("mouseover", function () {
-//     //increase the size of bookNavImg 
-// })
-
-
-// //Click event - add to main 
-
-// const something = something;
-
-// something.addEventListener("click", function() {
-//     addBookToMain(book)
-// })
-
-// //Submit event - add comments 
-
-// const form = form;
-
-// form.addEventListener("submit", function(e){
-//     e.preventDefault();
-
-//     e.target.something.value; 
-
-
-// })
