@@ -84,8 +84,8 @@ function addBookToMain(book, authors, bookNavImg) {
     let bookAuthor = document.querySelector("#book-author");
     let bookImage = document.querySelector("#main-book-image");
 
-    bookName.textContent = book.title;
-    bookAuthor.textContent = authors.name;
+    bookName.textContent = `Title: ${book.title}`;
+    bookAuthor.textContent = `Author: ${authors.name}`;
     bookImage.src = bookNavImg;
 
 }
