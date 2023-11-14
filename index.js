@@ -1,112 +1,34 @@
+bookArray = ["OL26832992M", "OL25536640M", "OL1736028M", "OL7408140M", "OL34017486M", "OL34878707M"];
+authorArray = ["OL6839743A", "OL7031499A", "OL398460A", "OL2670651A", "OL1396390A", "OL318513A"];
+
 let currentBook;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    fetchEloquent();
-    fetchCracking();
-    fetchCodeComplete();
-    fetchPragmatic();
-    fetchWorkingEffectively();
-    fetchCleanCode();
+    for (i=0; i < bookArray.length; i++){
+        let book = bookArray[i];
+        let author = authorArray[i];
+        fetchBooks(book, author)
+    }
 })
 
-//Fetch Eloquent JavaScript Book
-function fetchEloquent() {
-    fetch("https://openlibrary.org/books/OL26832992M.json")
+
+
+function fetchBooks(book, author) {
+    fetch(`https://openlibrary.org/books/${book}.json`)
         .then((r) => r.json())
         .then((book) => {
-
-            fetch("https://openlibrary.org/authors/OL6839743A.json")
+            fetch(`https://openlibrary.org/authors/${author}.json`)
                 .then((r) => r.json())
                 .then((authors) => {
-                    createNav(book, authors),
+                    createNav(book, authors);
                    // popOnHover(),
-                    attachForm()
+                    // attachForm()
                 })
         }
         )
 }
 
-// Fetch Cracking the Code Interview
-function fetchCracking() {
-    fetch("https://openlibrary.org/books/OL25536640M.json")
-        .then((r) => r.json())
-        .then((book) => {
-
-            fetch("https://openlibrary.org/authors/OL7031499A.json")
-                .then((r) => r.json())
-                .then((authors) => {
-                    createNav(book, authors),
-                        popOnHover()
-                    attachForm()
-                })
-        }
-        )
-}
-
-// Fetch Code Complete
-function fetchCodeComplete() {
-    fetch("https://openlibrary.org/books/OL1736028M.json")
-        .then((r) => r.json())
-        .then((book) => {
-
-            fetch("https://openlibrary.org/authors/OL398460A.json")
-                .then((r) => r.json())
-                .then((authors) => {
-                    createNav(book, authors),
-                        popOnHover()
-                })
-        }
-        )
-}
-
-//Fetch Pragmatic Programmer
-function fetchPragmatic() {
-    fetch("https://openlibrary.org/books/OL7408140M.json")
-        .then((r) => r.json())
-        .then((book) => {
-
-            fetch("https://openlibrary.org/authors/OL2670651A.json")
-                .then((r) => r.json())
-                .then((authors) => {
-                    createNav(book, authors),
-                        popOnHover()
-                })
-        }
-        )
-}
-
-//Fetch Working Effectively With Legacy Code
-function fetchWorkingEffectively() {
-    fetch("https://openlibrary.org/books/OL34017486M.json")
-        .then((r) => r.json())
-        .then((book) => {
-
-            fetch("https://openlibrary.org/authors/OL1396390A.json")
-                .then((r) => r.json())
-                .then((authors) => {
-                    createNav(book, authors),
-                        popOnHover()
-                })
-        }
-        )
-}
-
-//Fetch Clean Code
-function fetchCleanCode() {
-    fetch("https://openlibrary.org/books/OL34878707M.json")
-        .then((r) => r.json())
-        .then((book) => {
-
-            fetch("https://openlibrary.org/authors/OL318513A.json")
-                .then((r) => r.json())
-                .then((authors) => {
-                    createNav(book, authors),
-                        popOnHover()
-                })
-        }
-        )
-}
 
 function createNav(book, authors) {
     const bookNav = document.querySelector("#books");
@@ -183,8 +105,7 @@ function clickOnBook(book, authors, bookNavImg) {
 
 }
 
-function attachForm() {
-    
+    //Ability to add comments anywhere
     const commentForm = document.querySelector("#comment-form")
     commentForm.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -196,7 +117,6 @@ function attachForm() {
     board.append(newComment);   
     })
 
-}
 
 console.log("hello");
 
