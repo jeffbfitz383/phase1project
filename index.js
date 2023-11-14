@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         .then((authors)=> {
           createNav(book, authors), createNav(book, authors), createNav(book, authors)
           createNav(book, authors)
-          popOnHover()
+          
         })
         }
         )}
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       })
 
       bookNavImg.addEventListener(('click'), ()=>{
-        clickOnBook(book, authors)
+        clickOnBook(book, authors, bookNavImg, coverSlug)
 
 
    })
@@ -75,11 +75,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
             image.style.height = "200px";
       }
 
-      function clickOnBook(book, authors){
+      function clickOnBook(book, authors, bookNavImg){
         console.log("clicked");
         let  bookName = document.querySelector("#book-name");
+        let  bookAuthor = document.querySelector("#book-author");
+        let  bookImage  = document.querySelector("#main-book-image");
+        
         bookName.textContent = book.title;
-
+        bookAuthor.textContent = authors.name;
+        bookImage.src = bookNavImg.src
 
       }
 
