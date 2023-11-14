@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (i=0; i < bookArray.length; i++){
         let book = bookArray[i];
         let author = authorArray[i];
-        fetchBooks(book, author)
+        fetchBooks(book, author);
     }
 })
 
@@ -61,9 +61,11 @@ function createNav(book, authors) {
     })
 
     bookNavImg.addEventListener(('click'), () => {
-        clickOnBook(book, authors, bookNavImg.src)
+        addBookToMain(book, authors, bookNavImg.src)
 
     })
+
+    addBookToMain(book, authors, bookNavImg.src);
 }
 
 function popOnHover(image) {
@@ -74,13 +76,13 @@ function popBackIn(image) {
     image.style.height = "200px";
 }
 
+
 //Click Event Listener - Clicked Book From Nav --> Shows up in main
-function clickOnBook(book, authors, bookNavImg) {
+function addBookToMain(book, authors, bookNavImg) {
 
     let bookName = document.querySelector("#book-name");
     let bookAuthor = document.querySelector("#book-author");
     let bookImage = document.querySelector("#main-book-image");
-    let bookDesc = document.querySelector("#main-book-description")
 
     bookName.textContent = book.title;
     bookAuthor.textContent = authors.name;
