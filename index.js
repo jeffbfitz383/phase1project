@@ -1,3 +1,5 @@
+let currentBook;
+
 bookArray = ["OL26832992M", "OL25536640M", "OL1736028M", "OL7408140M", "OL34017486M", "OL34878707M"];
 authorArray = ["OL6839743A", "OL7031499A", "OL398460A", "OL2670651A", "OL1396390A", "OL318513A"];
 
@@ -80,6 +82,8 @@ function popBackIn(image) {
 //Click Event Listener - Clicked Book From Nav --> Shows up in main
 function addBookToMain(book, authors, bookNavImg) {
 
+currentBook = book;
+
     let bookName = document.querySelector("#book-name");
     let bookAuthor = document.querySelector("#book-author");
     let bookImage = document.querySelector("#main-book-image");
@@ -100,6 +104,7 @@ const board = document.querySelector("#comment-board")
 const newComment = document.createElement("p");
 newComment.textContent = comment;
 board.append(newComment);   
+console.log(currentBook);
 })
 
 
