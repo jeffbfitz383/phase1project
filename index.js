@@ -1,14 +1,14 @@
 bookArray = ["OL26832992M", "OL25536640M", "OL1736028M", "OL7408140M", "OL34017486M", "OL34878707M"];
 authorArray = ["OL6839743A", "OL7031499A", "OL398460A", "OL2670651A", "OL1396390A", "OL318513A"];
 
-let currentBook;
+// let currentBook;
 
 document.addEventListener('DOMContentLoaded', () => {
 
     for (i=0; i < bookArray.length; i++){
         let book = bookArray[i];
         let author = authorArray[i];
-        fetchBooks(book, author)
+        fetchBooks(book, author);
     }
 })
 
@@ -22,8 +22,6 @@ function fetchBooks(book, author) {
                 .then((r) => r.json())
                 .then((authors) => {
                     createNav(book, authors);
-                   // popOnHover(),
-                    // attachForm()
                 })
         }
         )
@@ -40,8 +38,6 @@ function createNav(book, authors) {
     const bookNavTitle = document.createElement("h6");
     const bookNavAuthor = document.createElement("p");
 
-
-    //IMPORTANT - We need to store all of these inside a div card 
     bookNav.appendChild(bookNavCard);
     bookNavCard.append(bookNavImg);
     bookNavCard.append(bookNavTitle);
@@ -55,100 +51,82 @@ function createNav(book, authors) {
 
     bookNavImg.id = 'ImageID';
 
-
-
     bookNavImg.addEventListener(('mouseover'), () => {
         popOnHover(bookNavImg)
-
-
 
     })
     bookNavImg.addEventListener(('mouseout'), () => {
         popBackIn(bookNavImg)
 
-
     })
 
     bookNavImg.addEventListener(('click'), () => {
-        clickOnBook(book, authors, bookNavImg.src)
-
+        addBookToMain(book, authors, bookNavImg.src)
 
     })
+
+    addBookToMain(book, authors, bookNavImg.src);
 }
 
 function popOnHover(image) {
     image.style.height = "230px";
-
-
 }
 
 function popBackIn(image) {
     image.style.height = "200px";
 }
 
-function clickOnBook(book, authors, bookNavImg) {
 
-    currentBook = book;
+//Click Event Listener - Clicked Book From Nav --> Shows up in main
+function addBookToMain(book, authors, bookNavImg) {
 
-    console.log(currentBook);
-
-
-
-    console.log("clicked");
     let bookName = document.querySelector("#book-name");
-    let bookAuthor = document.querySelector("#book-author")
-    let bookImage = document.querySelector("#main-book-image")
+    let bookAuthor = document.querySelector("#book-author");
+    let bookImage = document.querySelector("#main-book-image");
 
-    bookName.textContent = book.title;
-    bookAuthor.textContent = authors.name;
+    bookName.textContent = `Title: ${book.title}`;
+    bookAuthor.textContent = `Author: ${authors.name}`;
     bookImage.src = bookNavImg;
 
 }
 
-    //Ability to add comments anywhere
-    const commentForm = document.querySelector("#comment-form")
-    commentForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const comment = event.target["comment-input"].value;
-        console.log(comment);
-    const board = document.querySelector("#comment-board") 
-    const newComment = document.createElement("p");
-    newComment.textContent = comment;
-    board.append(newComment);   
-    })
+//Comment Functionality - Ability to Leave A Comment on The Page
+const commentForm = document.querySelector("#comment-form")
+commentForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const comment = event.target["comment-input"].value;
+    console.log(comment);
+const board = document.querySelector("#comment-board") 
+const newComment = document.createElement("p");
+newComment.textContent = comment;
+board.append(newComment);   
+})
 
 
-console.log("hello");
+//OPTIONAL FUN ANIMATION - TURN OFF BY DEFAULT
 
-//NOTE - None of the below will work with the current HTML file but can be restuctured once html skeleton is complete
-
-
-
-//Hover mouseover event - expand size of book on hover 
-
-// const bookNavImg = bookNavImg;
-
-// bookNavImg.addEventListener("mouseover", function () {
-//     //increase the size of bookNavImg 
-// })
+// window.addEventListener('mousemove', createBook);
 
 
-// //Click event - add to main 
+// function createBook(e) {
+//     let book = document.createElement('div');
+//     book.textContent = '📖';
+//     book.style["font-size"] = `100px`;
+//     document.body.appendChild(book);
 
-// const something = something;
+//     book.style.position = 'absolute';
+//     book.style.left = e.pageX + 'px';
+//     book.style.top = e.pageY + 'px';
 
-// something.addEventListener("click", function() {
-//     addBookToMain(book)
-// })
+//     let animation = book.animate([
+//         { transform: 'scale(1)', opacity: 1, offset: 0 },
+//         { transform: 'scale(2)', opacity: 0, offset: 1 },
+//     ], {
+//         duration: 500,
+//         iterations: 1
+//     });
 
-// //Submit event - add comments 
-
-// const form = form;
-
-// form.addEventListener("submit", function(e){
-//     e.preventDefault();
-
-//     e.target.something.value; 
-
-
-// })
+//     animation.onfinish = () => {
+//         document.body.removeChild(book);
+//     };
+// }
