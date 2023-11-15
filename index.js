@@ -82,7 +82,7 @@ function popBackIn(image) {
 //Click Event Listener - Clicked Book From Nav --> Shows up in main
 function addBookToMain(book, authors, bookNavImg) {
 
-currentBook = book;
+
 
     let bookName = document.querySelector("#book-name");
     let bookAuthor = document.querySelector("#book-author");
@@ -91,6 +91,12 @@ currentBook = book;
     bookName.textContent = `Title: ${book.title}`;
     bookAuthor.textContent = `Author: ${authors.name}`;
     bookImage.src = bookNavImg;
+
+    if (book.title === "Eloquent JavaScript"){
+        currentBook = 1;
+    }
+
+    console.log(currentBook);
 
 }
 
@@ -105,6 +111,7 @@ const newComment = document.createElement("p");
 newComment.textContent = comment;
 board.append(newComment);   
 console.log(currentBook);
+event.target.reset();
 })
 
 
