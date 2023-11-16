@@ -92,12 +92,6 @@ function addBookToMain(book, authors, bookNavImg) {
     bookAuthor.textContent = `Author: ${authors.name}`;
     bookImage.src = bookNavImg;
 
-    if (book.title === "Eloquent JavaScript"){
-        currentBook = 1;
-    }
-
-    console.log(currentBook);
-
 }
 
 //Comment Functionality - Ability to Leave A Comment on The Page
