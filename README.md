@@ -1,4 +1,4 @@
-# 📖 Programming Book Rater
+# 📖 Programming Book Viewer
 
 ### A simple, single-page website written in HTML, CSS, and vanilla JavaScript that allows users to select a Programming Book to view detailed info & leave a comment on our graffiti/comment wall!
 
