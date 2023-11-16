@@ -3,8 +3,6 @@ let currentBook;
 bookArray = ["OL26832992M", "OL25536640M", "OL1736028M", "OL7408140M", "OL34017486M", "OL34878707M"];
 authorArray = ["OL6839743A", "OL7031499A", "OL398460A", "OL2670651A", "OL1396390A", "OL318513A"];
 
-// let currentBook;
-
 document.addEventListener('DOMContentLoaded', () => {
 
     for (i=0; i < bookArray.length; i++){
@@ -12,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let author = authorArray[i];
         fetchBooks(book, author);
     }
+
 })
 
 
@@ -28,6 +27,7 @@ function fetchBooks(book, author) {
         }
         )
 }
+
 
 
 function createNav(book, authors) {
@@ -81,7 +81,6 @@ function popBackIn(image) {
 
 //Click Event Listener - Clicked Book From Nav --> Shows up in main
 function addBookToMain(book, authors, bookNavImg) {
-
 
 
     let bookName = document.querySelector("#book-name");

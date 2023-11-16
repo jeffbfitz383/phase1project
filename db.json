@@ -1,11 +1,11 @@
 {
-    "comments": [
+    "books": [
         {
             "id": 1,
             "book_name": "Eloquent JavaScript",
             "book_author": "Marijin Haverbeke",
             "book_image": "https://covers.openlibrary.org/b/id/8508178.jpg",
-            "book_description": "example,",
+            "book_description": "This much anticipated and thoroughly revised third edition of Eloquent JavaScript dives deep into the JavaScript language to show you how to write beautiful, effective code. It has been updated to reflect the current state of Java¬Script and web browsers and includes brand-new material on features like class notation, arrow functions, iterators, async functions, template strings, and block scope. A host of new exercises have also been added to test your skills and keep you on track.",
             "book_comments": "example"
         },
         {
@@ -47,7 +47,7 @@
             "book_image": "https://covers.openlibrary.org/b/id/14430328.jpg",
             "book_description": "example,",
             "book_comments": "example"
-        },
+        }
         
       
     ]
